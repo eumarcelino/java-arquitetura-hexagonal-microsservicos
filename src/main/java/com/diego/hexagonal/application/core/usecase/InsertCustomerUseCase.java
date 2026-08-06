@@ -1,10 +1,11 @@
 package com.diego.hexagonal.application.core.usecase;
 
 import com.diego.hexagonal.application.core.domain.Customer;
+import com.diego.hexagonal.application.ports.in.InsertCustomerInputPort;
 import com.diego.hexagonal.application.ports.out.FindAddressByZipCodeOutputPort;
 import com.diego.hexagonal.application.ports.out.InsertCustomerOutputPort;
 
-public class InsertCustomerUseCase {
+public class InsertCustomerUseCase implements InsertCustomerInputPort {
 
     private final FindAddressByZipCodeOutputPort findAddressByZipCodeOutputPort;
 
@@ -18,7 +19,7 @@ public class InsertCustomerUseCase {
         this.insertCustomerOutputPort = insertCustomerOutputPort;
     }
 
-
+    @Override
     public void insert(Customer customer, String zipCode) {
         var address = findAddressByZipCodeOutputPort.find(zipCode);
         customer.setAddress(address);
