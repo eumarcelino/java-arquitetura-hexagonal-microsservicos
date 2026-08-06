@@ -4,7 +4,9 @@ import com.diego.hexagonal.application.core.domain.Customer;
 import com.diego.hexagonal.application.ports.in.InsertCustomerInputPort;
 import com.diego.hexagonal.application.ports.out.FindAddressByZipCodeOutputPort;
 import com.diego.hexagonal.application.ports.out.InsertCustomerOutputPort;
+import org.springframework.stereotype.Service;
 
+@Service
 public class InsertCustomerUseCase implements InsertCustomerInputPort {
 
     private final FindAddressByZipCodeOutputPort findAddressByZipCodeOutputPort;
