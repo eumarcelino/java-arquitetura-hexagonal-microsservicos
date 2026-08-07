@@ -14,4 +14,4 @@ spring:
 arantes:
   client:
     address:
-      url:http://localhost:8087/addresses
+      url: http://localhost:8087/addresses
