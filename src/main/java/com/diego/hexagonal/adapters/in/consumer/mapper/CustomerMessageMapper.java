@@ -10,5 +10,6 @@ import org.mapstruct.Mapping;
 public interface CustomerMessageMapper {
 
     @Mapping(target = "address", ignore = true)
+    @Mapping(target = "validCpf", source = "isValidCpf")
     Customer toCustomer(CustomerMessage customerMessage);
 }
