@@ -32,14 +32,6 @@ public class Customer {
         this.id = id;
     }
 
-    public Boolean getValidCpf() {
-        return isValidCpf;
-    }
-
-    public void setValidCpf(Boolean validCpf) {
-        isValidCpf = validCpf;
-    }
-
     public String getName() {
         return name;
     }
@@ -63,4 +55,13 @@ public class Customer {
     public void setCpf(String cpf) {
         this.cpf = cpf;
     }
+
+    public Boolean getIsValidCpf() {
+        return isValidCpf;
+    }
+
+    public void setIsValidCpf(Boolean isValidCpf) {
+        this.isValidCpf = isValidCpf;
+    }
+
 }

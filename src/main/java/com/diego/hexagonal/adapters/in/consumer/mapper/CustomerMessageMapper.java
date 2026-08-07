@@ -5,11 +5,10 @@ import com.diego.hexagonal.application.core.domain.Customer;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 
-
 @Mapper(componentModel = "spring")
 public interface CustomerMessageMapper {
 
     @Mapping(target = "address", ignore = true)
-    @Mapping(target = "validCpf", source = "isValidCpf")
     Customer toCustomer(CustomerMessage customerMessage);
+
 }
