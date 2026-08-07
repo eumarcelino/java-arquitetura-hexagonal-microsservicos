@@ -8,7 +8,7 @@ import lombok.Data;
 public class StandardError {
 
     private Long timestamp;
-    private String status;
+    private Integer status;
     private String message;
     private String path;
 }
